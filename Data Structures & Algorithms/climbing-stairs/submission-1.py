@@ -1,0 +1,18 @@
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        
+        one, two = 1, 2
+
+        if n <= 2:
+            return n
+
+        for _ in range(3, n+1):
+            temp = one + two
+            one = two
+            two = temp
+        
+        return two
+
+
+
+
